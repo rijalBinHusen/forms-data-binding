@@ -1,21 +1,28 @@
 <template>
     <form>
         <label>Email:</label>
-        <input type="email" required />
+        <input type="email" v-model="email" required />
+
+        <label>Password:</label>
+        <input type="password" v-model="password" required />
     </form>
 </template>
 
 <script>
 export default {
-    setup() {
-        
+    name: "SignupForm",
+    data() {
+        return {
+            email: "",
+            password: "",
+        }
     },
 }
 </script>
 
 <style scoped>
 form {
-    max-width: 800px;
+    max-width: 500px;
     margin: 30px auto;
     background: white;
     text-align: left;
