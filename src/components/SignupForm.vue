@@ -11,6 +11,27 @@
             <option value="developer">Web developer</option>
             <option value="designer">Web designer</option>
         </select>
+
+        <div class="terms">
+            <input type="checkbox" v-model="terms" id="terms" required />
+            <label for="terms">Accept terms and conditions</label>
+        </div>
+
+        <div>
+            <input type="checkbox" value="rijal" v-model="names" id="rijal" />
+            <label for="rijal">Rijal</label>
+        </div>
+
+        <div>
+            <input type="checkbox" value="rijal2" v-model="names" id="rijal2" />
+            <label for="rijal2">Rijal2</label>
+        </div>
+
+        <div>
+            <input type="checkbox" value="rijal3" v-model="names" id="rijal3" />
+            <label for="rijal3">Rijal3</label>
+        </div>
+
     </form>
 </template>
 
@@ -22,8 +43,13 @@ export default {
             email: "",
             password: "",
             role: "designer",
+            terms: false,
+            names: [],
         }
     },
+    updated() {
+        console.log(this.names)
+    }
 }
 </script>
 
@@ -55,6 +81,14 @@ input, select {
     border: none;
     border-bottom: 1px solid #ddd;
     color: #555;
+}
+
+input[type="checkbox"] {
+    display: inline-block;
+    width: 16px;
+    margin: 0 10px 0 0;
+    position: relative;
+    top: 2px;
 }
 
 </style>
