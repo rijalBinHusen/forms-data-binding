@@ -1,5 +1,8 @@
 # Forms-data-binding
 
+## The project would look like
+![screentshoot](src/assets/Screenshot_2022-06-04_05-20-33.png)
+
 ## Project setup
 ```
 npm install
